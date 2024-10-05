@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+    <!--Flex box is 1-D layout method for laying out items in row or columns. Css flex box s a better way to align items into a container
+    FlexBox= flexible + box, watch vdo 28 for notes-->
+    <style>
+        .container{/*to create big box it will contains box 1,2,3,4,5,6*/ 
+            height:544px;
+            width:100%;
+            border:2px solid black;
+            display:flex;/*it will change vertical boxes into horizontal 6 boxes--initalizeing flex container */
+            /*Flex Properties in container-
+            1.flex-direction- row--default
+            2.flex-direction- coloumn;--eek line vertical me aajayege
+            3.flex-direction- row-reverse;
+            now if 1-2-3 are written together in code then jo last me likha jayega uska command exceute hoga like yaha par 3wala load hoga 
+            
+            4.flex-wrap:wrap;---help to wrap the 6 boxes jab big box (container) ko choota badda karte hai
+            5.flex-wrap:reverse;
+            6.flex-flow:row-reverse wrap;--to set warp and row property together*/
+
+         /*   justify-content: center;/*center me aa jata hai*/
+           /* justify-content: space-between;/*alternate boxes ke bich me  same spaces, lekin border se nhi*/
+            /*justify-content: space-evenly;/*same spaces including straing and end */
+           /* justify-content:space-around;/*har boxes ko spaces millegi*/
+
+         /*   align-items:center;/*vertically center e aa jayege boxes*/
+          /*  align-items:flex-end;/*niche aa jayega*/
+           /* align-items:flex-start;/*default--upper ke side*/
+           /* align-items: stretch;/* evenlly spaces*/ 
+
+        }
+        .item{/*these boxes are in-line elemnets*/
+            background-color: tomato;/*will colour only that much background which contains text of box1,2,3,4,5,6*/
+            border: 2px solid black;/*will create borders of box1 ,2,3,4,5,6*/
+            margin:10px;/*will separate all the boxes*/
+            padding:3px;
+            width:200px;
+            height:200px;
+        }
+
+        #item1{
+            /*order:2---2,3,4,5,6,1*/
+           flex-grow: 2;/*jese jese big box  ko bada chota karege wese wese 1 ka size uske according hoga*/
+
+        }
+        #item2{
+            flex-grow: 3;/*jese jese big box  ko bada chota karege wese wese 2 ka size uske according hoga, lekin jo 2 box hai vo 1 ke compare me jyada increase ya decrease hoga*/
+            flex-shrink:3;/*shrink hoga if big box ka size change hoga */
+            flex-basis:320px;/*intial uska size*/
+            
+        }
+        #item3{/*1,2,4,5,6,3*/
+            order:40;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Box Tutorial</h1>
+    <div class="container">
+        <div class="item" id="item1">BOX1</div>
+        <div class="item" id="item2">BOX2</div>
+        <div class="item" id="item3">BOX3</div>
+        <div class="item" id="item4">BOX4</div>
+        <div class="item" id="item5">BOX5</div>
+        <div class="item" id="item6">BOX6</div>
+    </div>
+</body>
+</html>

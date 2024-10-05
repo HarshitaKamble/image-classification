@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and z-index</title>
+    <!--z-index  doesnt work work position as static(default) but work for all other positons like absolute, relative, fixed, sticky.
+     z-index for eg if for no reason boxes overlap ho rahe hai toh z-index will tell which box will be upper and which will be lower -->
+    <style>
+        .box{/*boc parameters*/
+            width:170px;
+            height:170px;
+            border:2px solid black;
+
+        }
+        #box1{/*will create box (named-1) of green colour, simi for box2,3,4*/
+            background-color: green;
+            position: relative;
+            top:49px;
+            z-index:35;/*jiski bhi z-index ki value zyda vo upar dikhega*/
+        }
+        #box2{
+            top:14px;
+            z-index:-4;
+            position: relative;
+            background-color: red;
+            /*visibility: hidden;---/*will hide box2 i.e red box but jo space vo box occupy kar raha hai vo space is reserved*/
+            /*display:none;---/*red box will disapper(vanish) also its space will be covered by box 3 i.e is blue*/
+        }
+        #box3{
+            background-color:blue;
+        }
+        #box4{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    
+</body>
+</html>

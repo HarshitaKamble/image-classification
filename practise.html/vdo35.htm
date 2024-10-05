@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/Custom Properties</title>
+    <style>
+        :root{/*ye cheee sab ke liye valid hogi*/
+            --primary-color:blue;
+            --danger-color:red;
+            --maxw:333px;
+           
+        }
+        .box{
+            --box-color: violet;/*variable creation, box-color=variable name*/
+            width:200px;
+            height: 200px;
+            border: 3px solid var(--danger-color);
+            margin:12px 9px;
+            box-shadow: 3px 3px var(--box-color);
+
+            background-color: var(--primary-color);
+        }
+        .container{
+            display: flex;
+            margin:auto;
+            background-color: var(--danger-color);
+            max-width: var(--maxw);
+            justify-content: center;
+            align-items:center;
+           /*background-color:var(--box-color) ;*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

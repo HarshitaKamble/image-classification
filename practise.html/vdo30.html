@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{
+            background-color: purple;
+            color: black;
+            font-size: 54px;
+            text-align: center;
+        }
+        @media (max-width:300px){
+            #box1{
+                display:block;
+                background-color: aqua;
+            }
+        }
+        @media (max-width:500px) and (min-width:300px){
+            #box2{
+                display:block;
+                background-color: red;
+            }
+        }
+        @media (max-width:500px) and (min-width:800px){
+            #box3{
+                display:block;
+                background-color: yellow;
+            }
+        }
+        @media (max-width:800px){
+            #box4{
+                display:block;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box1">Number one brand- Iphone</div>
+    <div class="box" id="box2">my priority-ONE plus</div>
+    <div class="box" id="box3">can be-Tablet</div>
+    <div class="box" id="box4">jo mere pass hai-Vivo</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute and nth child pseudo selectors</title>
+    <style>
+      .container {
+        display: block;
+        width: 233px; /*kisi bhi block ko center me lane ke liye uski width aur margin set karni padti hai*/
+        margin: auto;
+      }
+      input {
+        display: block; /*name,password, submit wali cheez ke line me horizontally align hoke millege*/
+      }
+      input[type='text']{/*isse bas text =name wale box ko belo parameters apply hoge*/
+        padding:23px;
+        border:2px solid red;
+      }
+      a[target]{/*will apply on go to google wala text, basically will apply on those which contains target*/
+        font-size:41px;
+        color:blue;
+      }
+      a[target='_self']{/*will apply on facebook hey wala text, basically will apply on those which contains target=self*/
+        font-size:19px;
+        color:green;
+      }
+      input[type='email']{/*for email */
+        color: yellow;
+        border: 4px solid black;
+      }
+
+      li:nth-child(3){/*will appply on 3rs item oonly*/
+        color: aquamarine;
+      }
+
+      li:nth-child(2n+0){/*har dusre elemnet par red color kar do*/
+        color:brown;
+      }
+
+      /*li:nth-child(3n+3){--->where n=0,1,2,3...
+        color:red;
+      }*/
+
+     /* li:nth-child(odd){
+        background-color: yellow;;
+      }
+          is me odd or even elemnet yello colour ka ho jayega
+      li:nth-child(even){
+          background-color:yellow;
+      }*/
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><a href="http://google.com" target="_blank">Go to google</a></h1><!--target=_blank likne se google site will open but in a new tab, is not written then google site will open but iin same tab-->
+      <h1><a href="http://facebook.com" target="_blank">Facebook hey</a></h1>
+      <form action="" class="form-control">
+        <input type="text" placeholder="Enter your name" />
+        <input type="email" placeholder="Enter your email" />
+        <input type="password" placeholder="Enter your password" />
+        <input type="submit" value="Submit" />
+      </form>
+      <ul>
+        <li class="item" id="item-1">Item1</li>
+        <li class="item" id="item-2">Item2</li>
+        <li class="item" id="item-3">Item3</li>
+        <li class="item" id="item-4">Item4</li>
+        <li class="item" id="item-5">Item5</li>
+        <li class="item" id="item-6">Item6</li>
+        <li class="item" id="item-7">Item7</li>
+        <li class="item" id="item-8">Item8</li>
+      </ul>
+    </div>
+  </body>
+</html>

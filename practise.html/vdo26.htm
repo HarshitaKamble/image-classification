@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTS</title>
+  </head>
+  <link rel="stylesheet" href="css/style26.css" />
+  <style>
+    body {
+      color: white;
+      margin: 0px;
+      padding: 0px;
+      background: url(https://www.geo.tv/assets/uploads/updates/2021-12-04/385904_6743117_updates.jpg);
+      font-family: cursive; /*this will not aply to call us and email button*/
+    }
+    .left {
+      border: 2px solid red;
+      display: inline-block; /*ye nhi karege toh left,right,mid ke line eek ke niche eek dikhege from border function*/
+      position: absolute; /*parent=header, ke according set ho jata hai*/
+      left: 23px; /*left se uthna pixel side hoga*/
+      top: 14px; /*upper se utthna pixel sarkega*/
+    }
+    .left img {
+      width: 63px; /*logo ka size*/
+      /* filter:invert(100%);/---*invert your pic colour*/
+    }
+    .left div {
+      line-height: 20px;
+      font-size: 20px;
+      text-align: center; /*to center bangtan sonyeondan text*/
+    }
+    .mid {
+      display: block;
+      width: 53%; /*mid block ki width ko increase , decrease karne ke liye*/
+      margin: 12px auto; /*center karne ke liye 3 conditions hoti hai- display-block, set width, margin auto*/
+      border: 2px solid rgb(15, 94, 8);
+    }
+    .right {
+      position: absolute; /*parent=header, ke according set ho jata hai*/
+      right: 23px; /*right se uthna pixel side hoga*/
+      top: 14px; /*upper se utthna pixel sarkega*/
+      border: 2px solid yellow;
+      display: inline-block; /*ye nhi karege toh left,right,mid ke line eek ke niche eek dikhege from border function*/
+    }
+    .navbar {
+      display: inline-block; /*ye karne ke width and height bhi set kr skte hai*/
+    }
+    .navbar li {
+      display: inline-block; /*isse home,abt, BTS, Contact us eek line me aa jayege */
+      /* color:white;---ye karne se home ,abt,BTS,US ka color white nhi hoga usko <navbar li a> karna padega*/
+      font-size: 20px; /*font size of home, abt, bts, us*/
+    }
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      padding: 11px;
+    }
+
+    .navbar li a:hover,
+    .navabr li a.active {
+      text-decoration: underline; /*whenever hover that thing will have underline*/
+      color: grey; /*whenever hover that thing will have grey color for that time being*/
+    }
+    .btn {
+      /*buttons submit, call us , email*/
+      margin: 0px 19px;
+      color: white;
+      background-color: black;
+      padding: 8px 14px;
+      border-radius: 13px;
+      font-size: 17px;
+      cursor: pointer;
+      font-family: fantasy; /*button ko alg se font dena padta hai*/
+    }
+    .btn:hover {
+      background-color: darkgrey;
+    }
+    .container {
+      border: 5px solid blue;
+      margin: 106px 89px;
+      padding: 89px;
+      width: 43%;
+      border-radius: 34px;
+    }
+    .form-group input {
+      /*for placeholder parameters*/
+      text-align: center; /*placeholder wala text center me aajayega*/
+      display: block; /*compressed me aajayege 4ro placeholders*/
+      width: 205px; /*placeholder box ki width*/
+      padding: 10px; /*for adjusting placeholder box length*/
+      border: 4px solid black;
+      font-size: 17px;
+      border-radius: 10px;
+      font-family: fantasy;
+    }
+    .container h1 {
+      /*container ke andar ki heading i.e - BTS-ARMY form*/
+      text-align: center;
+    }
+    .container button {
+      /*container ke andar ka buttoon i.e - submit*/
+      display: block;
+      margin: 9px 65px;
+      width: 23%;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <div class="left">
+        <!--Left box for logo-->
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBISERIRERESDw8REhEPDw8PEhEPEA8PGBkZGRgUGRgcITwlHB4rHxYYKDg0Ky8/NTU1GiQ7QDszPy40Nz8BDAwMDw8QHRISGjQhIysxMTQ2NDQ0ND8xNDQ0NDQ0MTQ0MTQ0NDExMTQxNDQxNDY0NDQ0NjQ0NDQ1NDQ0NDE0Mf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQEDCAL/xABGEAABAwECBwsJBwMEAwAAAAAAAQIDBAURBhIhMXJzsgcVIiQ0QVFhk7PREzI1UlRxgbHBIzN0gpGSoRQl0lOUosJEYoP/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAgMEAQX/xAApEQEBAAIBAgUCBwEAAAAAAAAAAQIRAyExBBIyccFR8AUTQWGBkdEi/9oADAMBAAIRAxEAPwC5gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGiwymeygnexzmORI7nscrHJe9qLcqZUyKpU0lt1LMq1M+KuS/y0mfozlqYdr/ban3R94wpOsfwE0k+SgblmEU/tM3ayeJ3Mwgm9pm7V/iRxkh3MkAkTbfm9ol7V/idrbfl9ol7V/iR5sh2tkAkCW9L7RJ2j/E5S3pPaJO0f4miSQ+kkA3e/0ntEnaP8Thbel9ok7R/iaXyhwsgG5db8vtEnayeJ1ut+X2iXtX+Jp1kOt0gG4fhBN7RL2r/E6H4RTJ/5Mqf/AFk8TUvkNdWVF64qZkz9agb9+E0vtcvbyf5HQ/Ceb2ubt5P8iMvkMZ8gEofhTP7XN/uJP8jrZhNUvdisq51cuW5KiTN0+cRJ7zusl/235H/QC5NzO0pXzVDZZpZUSNiokkj5ER2MuVEcuQsxj7ymNzufFqJuuNqf8i26KS9EAzwAAAAAAAAAAAAEa3QF/ttTox94wo2rfwU0k+peG6Iv9sqtGPvGFDVT+Cmkn1A7GvO1jzAR53NeBntkMiRrmYuO1W47WvYq5nMcl6Ki/E1jZCwYaWOalhY9t6eRiVqpkcxcRuVq8yk8MPNty3SIJIfXlD7tSzn07uFw41W5kiJci9S9Cmv8qRssuq7OrO8ocLIYflDhZDgynSdZ1ukMdXnW+VERVVciAfdTU4qZM65urrNarlVUREVyqqIiIl6qq5kROdTmJkk8iMjar3uzNTM1vSq8yJ0k3sOw46ZMdypJOqZX3ZGJ6rE5vfnXqzFnHxZcl6dvqhnnMe6B1bHxvcx6Yr23Yzb0VWqqIt2TqVDDkebDCd/HKjTbsMNK+QhlNWxKXclfT3mRZLvtfyO+hr3OMyyl+0/Kv0OOrGwCdxh+rTaLisxciFMYALxiTVt2i5rMzIBtwAAAAAAAAAAAAEX3SF/tVXox94w8+1L+Cmkh6A3SV/tNZoR94w88VL+D8UA+kedrXmHjH2jwMxry0LLdxeDUQ7DSpkeWpZK8Wp9RDsNLuHvXLNs2RjXtVj2o5jkuc1yXoqENtuwnRXyRXvhzubnfGn/ZvXzc/STG8Xl+WEziHZWGOcLISi3sG0fjS0yI1+d0KZGv62dC9WZeohr3KiqioqKiqiot6KipnRU5lMmeFxuqnLtkK85pKGSrf5OPgsYv2krvMYvR1r1fLOZ1j2K+e6R98cHM7M+TR6E6/wBL+aX08DI2NZG1GMalzWtzJ4r1l3FwXPrl2V8nJ5ek7uqzLOjpmYkaZV897rle9elV+mZDKVx8q4+VcehMZJqMltvWqxwrdx2o027DTSqpt8K147PpN2GmnPK5PXfet2PpgZlm/eflX6GGZdnef+VfoQSWFueLxiTVt2i6LMzIUtudLxiXVt2i6bMzIBtwAAAAAAAAAAAAEU3TPRNXoR94w86VC8H4oei90z0RWaEfeMPOUy5PigHwjjlHHwAO1HFtWQvFab8PBsNKhvLdsheK034eDYaW8V61LGbZl4vPkXmiUuLm8q7CGVEq6lVzJI4s+8qLCqS+sqE5kld8VK+f0xDWli2K++kp1X/Rj2UMxVMKw+S02pi2UMxTXjeijLF8qcKp9KhxcWSqcsKq/Crls+k3Zaag2+FXLZ9Juy01B5XJ6771sw9MDKoPP/Kv0MUyaHzvgv0IJLB3OF4xLq27RddmZkKT3Nl4xLq2bSl2WZmQDbgAAAAAAAAAAAAInuneiKzQj7xh5xkXJ8T0buoeh63Qj7xh5weBwAABb9kclpvw8Gw0qAt+yU4tT/h4NhpPCreKb2yrjg+z4ctyXqXSrLi65HXe8qDCTllRrXFtOW9bypcJeWVOtf8AMjy3/mKc5pZNh8lptRFsoZ1xhWHyWm1EWyhnGjG9IhcXyqHyqH3cLiyVVcFWYVctn0m7LTTm4wq5bPpN2WmnPOz9V91k7BkUfnfBfoY53UvnfDwIurB3NF4zNq2bSl3WZmQo/cy5TNq2bSl4WZmQDbgAAAAAAAAAAAAIluo+h63Vx94w83XnpDdS9DVurj7xh5taoH2AAClwWTyan1EGw0p9S4bK5NT6iHYaSxafDTdrKMeV1+TmT5nZI65OtToLJWi4uCpcJOWVOtd8y2yo8JOWVOuf8yOd6M3PNRZlhckptRFsIZxg2HyWm1EWyhnF0vQuPQOLjkFkqvLFVWFfLZ9Juy005uMK+XT6TdlppzHl3qsO6nzr7vA6Tshzr7vAiJ9uYLxmbVs2lLzszMhRe5cvGZtXHtKXpZmZANuAAAAAAAAAAAAAiO6l6GrdXH3jDzaxuf3fVD0luo+h63Vx94w84ImRfd9UAAAApcNmLdTQaiHYaU8pblnuvp4E5kgh2Wht8FN3L+Pl3uW84uOQS223F8lR4R8sqddJtKW8VBhHyyp10m0oyrF4qaxnv8LNsPktNqItlDOMKwuS02oh2UM4slT8vRwACcqu4qqws5dUaTdlppjc4WcuqNJuy00xny71kvcOyDOvu+qHWdtPnX3fVDjieblycZm1ce0pelmZkKN3MOUzatm0peVmZkA24AAAAAAAAAAAACJbp/oet0I+8Yecbsjvcm009H7p3ois0I+8Yec3JwXe5NpoHUAcPdcl6gdU77ku51+Rb9m8ng1MWw0phzr1vUuezOTwamLYaRyel+HTdy/j5ZRwfRwNvQuIVBhHyyq18m0pb5UGEfLarXy7Sknn+NmsJ7rQsNOKU/4eHZQzTDsPklP+Hh2WmcSlXeXo+AfVxwTlV3FVGFnLqjSbstNMbjCzl1RppstNOV15ufqod1L5y+76odJkUfnLor80OIp7uZJxmbVs2lLwszMhSO5onGZtWzaUu6zMyAbcAAAAAAAAAAAABE9030RWaEfeMPOzk4L/AHJtNPRW6Z6JrNCPvGHneROA/RbtsAxTFnfetyZk+Z2zPuS5M6/whigC6bN+4g1MWw0pYmEmG0jY444YmtxI2Rq+RVkVcVES9GpciZusjlNt/gefj4vNc79PlYXyTOvQaavwmo4b0dKj3JfwYftHX9F6cFPipWtba1RP99M+RPVVbm/tTJ/BgCYrOX8R36Mf7/yf6mlfh5It6U8TY09eRcdypo5k/kiVTO6R75HrjPe5XuW5Evcq3qtyZEOgEmDk5s+T13aT2XhjUQNbG5rJomJitRUxHNaiXIiOTq6UJRQYZUklyPV1O7okTGZf1Ob9UQrABPDxPJj03v3XdBM2RuOx7ZGLmcxyOb+qHYUpTVL43Y0b3xu9Zjlav6oSKgw2qo7kkRtQ3/2Tyb/3NyfqindtOPi8b6pr7/tr8LeXVGmmy00xn2xWpUVEkyNVqSKi4qrjKmREuv58xgHGHK7ytgZND5y6K/NDGMqg89dFfmgRT/c2TjEurZtKXZZmZClNzhOMS6tm0XXZmZANuAAAAAAAAAAAAAiu6V6JrNCPvGHnioyRvXoa3bYeh90r0TV6EfeMPPFan2cmi3bYBpXOvW9TgAATl+CVJHGx8tS+NHI3K50bG4ypfcl6dS/oQYtS3KCKemiZNO2majo3I96sRFcjXIjeEqJmVV+BPGz9Ysww80v7IzaGC8SQPnpp/KtY1znXqxyK1uV1ytzKiIpESyY6NlPZ87aZ39Wjmyqr2OYqYzmYrlyLdwURFuS9chWxLl101NK/LZ3Z9jU8cs7GTSeSidj40l7W3XNVUyrkS9URPiS6LBCjexXsqXvY2/Ge18TmtuS9b1RvQQIsLBD0bP759hCOFm+sWcePm6I1b1nUsLWLT1Hl3OVyPTHY/FRES5eCmQ0QBHK7u9aVRJ8HcGUqY3TyyLHCiqjcXFRXYuVzlVciNT6LmuNgzBWklRyU9Ur3tTmdHIidCqiIi3HbgnaNO+kfSTSNicvlWcJyMxo3pna5cmNeqpd7jvgwWfCrpKOrVjnNVt7mMe1zb0XFxkzZUTmLOO4/rjtblxW4y41A6qB0cj43ecxzmOuzYzVuX5HQZdopJ5aRJvvke5JFW7K+/LmyfoYhVVYZdnJw10V+aGIZlmeeuivzQCf7nScYl1bdouqzMyFL7nicYl1bdouizMyAbcAAAAAAAAAAAABFt0j0VV6MfeMPPNan2Umi3bYeh90j0VV6MfeMPPVcn2Mmi3bYBoAAALXtuyFq6WKNr0jVqxyYzkVyKiMcl2TSKoOcZelf1C/h5pxzKXHe/wB9fCzKKjbZ1HMksrXK5XvbcmLjKrUa1rUVcqqqfz1FZHP8nB21XnlMtamgsPA/0ZPl9o2EK8BxPg5fysvNrfT7+oAApTnBOlpKilfC9saVX2iY72osiNcnBe2/Pd9Os2VgYOpQvklfUtc1Y1YqKiRsRL0XGcqu5rv5K0AnS7afz8PLjLh1k1vbZYQVTZqqaSPzHP4K+siIjcb43X/E1oAZr1DNsr7xdFfmhhGdZP3i6C/NALB3Pk4xLq27Rc1mZkKbwATjD9W3aLkszMgG3AAAAAAAAAAAAARfdG9F1WjF3jDz7aH3Mmi3bYehN0GNzrMqWta5zlSO5rWq5y/aMVciFDT0FTzRTMTVPS/33oBEgSZaGo9STs18Dj+hn9V/7F8AI0CS/wBBP6sn7F8Dj+gn9STs18AI2CSb3z+pJ2a+BxvdN6knZr4ARwEj3um9R/Zr4De2b1ZOzXwAjgJHvbL6j+zXwON7Jf8ATf2bvACOgkW9cvqP/Y7wG9cvqP8A2O8AI6CQ71S+o/8AY7wG9UnqP7N3gBHjPsb7xdFfmhst6pfUf2a+B9RWbKx2M1j7+f7N2VOjMBL8AuUP1abRcdmZkKm3PqSTy8qujexPJtyva5qX42a9ULeoGXIgGyAAAAAAAAAAAAAcKhh1FPjGaANG+y0XmOrehOgkFwuAj+9CdA3oToJBcLgI/vQnQN6E6CQXC4CP70J0DehOgkFwuAj+9CdA3oToJBcLgI/vQnQN6E6CQXC4CP70J0DehOgkFwuAj+9CdB9NslOg31wuA1UFAjeY2ETLjtOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z"
+          alt=""
+        />
+        <div>Bangtan Sonyeondan</div>
+      </div>
+      <div class="mid">
+        <!--Mid box for navbar-->
+        <ul class="navbar">
+          <!--class=active isliye becoz by using this eg-home par hover kare toh home alga ke dikhega -->
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#" class="active">About</a></li>
+          <li><a href="#" class="active">BTS</a></li>
+          <li><a href="#" class="active">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <!--Right box for buttons-->
+        <button class="btn">CAll US</button>
+        <button class="btn">Email Us</button>
+      </div>
+    </header>
+    <div class="container">
+      <h1>BTS-ARMY form-</h1>
+      <form action="noation.php">
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your name" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your age" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="Army Since" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="Locality" />
+        </div>
+        <button class="btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

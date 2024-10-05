@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Size units</title>
+    <!-- Responsive design- its a way for web developers to make his website adpat to all devices.1]max-width/max-height 2]CSS Media Quries 3]rem/vh/vw units over pixels-->
+    <style>
+      html{
+        font-size:25px;
+      }
+      .container {
+        width:100vw;/*vw=view width--puri page ka width le lega*/
+        height:100vh;/*puri page ki height le lega*/
+        font-size: 10px;/*parent*/
+        border: 2px solid red;
+      }
+      h1 {
+        text-align: center;/*heading will be in center*/
+       
+      }
+      #first{
+        font-size: 3em;/*heading font size, 3em=parent ke according 3 times size lega*/ 
+        padding:3em;
+
+      }
+      #second{
+        /*font-size:3rem;/*25(html=root element)*3=75*/
+      /*  padding:3rem;*/
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="first">1 heading</h1>
+      <h1 id="second">2 heading</h1>
+      <h1 id="third">3 heading</h1>
+    </div>
+  </body>
+</html>

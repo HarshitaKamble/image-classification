@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        h1{
+            background-color:violet;
+            color:black;
+            font-weight: bold;
+            text-align: center;
+        }
+        div p{/*sare div anadar p wale property par apply hogi on 1 and 2 not 3, kitna bhi div ke andar div ke andar div ke andar ho*/
+            color:yellow;
+            font-weight: bold;
+            background-color: green;
+        }
+        /*div li p{
+            /*div ke anadar li ke andar p*/
+       /* }*/
+
+       /*div > p --->div is direct parent to p , for eg-another paragraph */
+
+      /* div + p--> esa para jiska just back wala chez div ho, eg-another para*/
+
+      
+    </style>
+</head>
+<body>
+    <h1>This is selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>div paragraph</p></li>
+            </ul>
+            <p>1.This is paragraph</p>
+        </div>
+            <p>2.ANother paragraph</p>
+    </div>
+
+    <p>3.Outermost Paragraph</p>
+    
+</body>
+</html>

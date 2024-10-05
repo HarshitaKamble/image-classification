@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow
+    </title>
+    <style>
+        .container{
+            display:flex;
+        }
+        .card{
+            padding: 23px 12px;
+            margin:23px 12px;
+            border: 2px solid red;
+            background-color: rgb(147, 147, 200);
+           /* box-shadow: 10px 13px green;/*(x,y)--if shadow upper dalni hai toh -ve numbers use kare and niche dalni hai toh +ve no.s*/
+           /*box-shadow: 10px 14px 3px green;/*3rd one is for blur*/
+          /* box-shadow: 10px 14px 3px 6px green;/*spread ke liye*/
+           /*box-shadow: 10px 14px 3px 6px rgba(126,172,172,0.9);/*alpha(0.5)-drakness ko kam karta hai*/
+           /*box-shadow: inset 10px 15px green;/*andar se shadow ayegi*/
+           /*box-shadow:10px 15px green, 4px 6px red;/*to add multiple shadowing colours*/
+
+        }
+        .card h2{/*for shadowing in text*/
+            /*text-shadow: 3px 4px red;
+             text-shadow 3px 4px 6px;*/
+             text-shadow: -4px -7px 9px;
+
+        }
+
+    </style>
+    
+
+    }
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1"><h2>C++ and C</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores hic impedit obcaecati, unde nemo quae sunt odit dolores quia voluptatem doloribus velit. Ab molestias doloribus doloremque quis, laboriosam earum dignissimos autem! Adipisci, iure.</p></div>
+        <div class="card" id="card2"><h2>JAVA2</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste repellat at neque doloremque, ut cupiditate voluptatem cumque illo earum sapiente? Sint pariatur minus sed mollitia repudiandae velit non eos aperiam! Sunt ea animi provident.</p></div>
+        <div class="card" id="card3"><h2>Python-3</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate tempore quo quos corporis nostrum placeat odio, aut soluta eveniet, molestias numquam magnam provident optio. Officia necessitatibus accusantium porro eos facere cupiditate ratione sed atque?</p></div>
+    </div>
+    
+</body>
+</html>

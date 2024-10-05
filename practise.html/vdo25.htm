@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position property</title>
+    <style>
+        .container{
+            border:3px solid black ;
+            background-color: rgb(143, 148, 43);
+            height:3444px;
+        }
+        /*CSS Position- static(default), absolute, relative, fixed, sticky*/
+        .box{
+            display:inline-block;/*eek line me aajayege*/ 
+            border:2px solid rgb(42, 49, 191);
+            width:150px;
+            height:150px;
+            margin:2px;        
+        }/*position-absolute karne se box 3 will be vanished(overlap 4over3)*/
+        #box3{/*compare to its normal position and will leave a gap at its normal position*/
+           /*position: relative;
+            top:34px;
+            left:4px;
+*/  
+        /*parent-container ke relative position adjust karega, this will not leave gap*/
+           /* position: absolute;
+            top:45px;
+            left:45px;*/
+
+            /*position of box 3 will be fixed on right side , it will not disapper even on scrolling*/
+           /* position: fixed;
+            right:34px;*/
+
+           /* position:sticky;---same as fixed*/
+
+           
+        }
+        
+    </style>
+</head>
+    <div class="container">/*white me jo 1,2,3,4 hai that is text*/
+        <div class="box" id="box1">1</div>
+        
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>
